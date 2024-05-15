@@ -258,7 +258,46 @@
             <!--/ Paper video. -->
         </div>
     </section>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
 
+
+
+                <h3 class="title is-4">Real-time Changing Appearance in Viewer</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        You can change the appearance of the scene to any image real-time in the viewer.
+                    </p>
+                </div>
+                <div class="content has-text-centered">
+                    <video id="replay-video" controls muted preload playsinline width="75%">
+                        <source src="./static/videos/replay.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+                <br />
+                <!--/ Interpolating. -->
+
+                <!-- Re-rendering. -->
+
+                <!--/ Re-rendering. -->
+
+
+
+
+
+
+
+            </div>
+
+            <br />
+
+
+        </div>
+    </div>
+    </div>
 
     <section class="section">
         <div class="container is-max-desktop">
@@ -326,22 +365,69 @@
 
                         </div>
                 </div>
+
             </div>
-            <!--/ Matting. -->
+        </div>
+    </section>
+    <div class="container is-max-desktop">
+        <div class=" column is-full-width">
+            <h3 class="title is-4">More Accurate Depth Rendering</h3>
+            <div class="content has-text-justified">
+                <p>
+                    Add a slider to compare the depth rendering of the scene with and without the background
+                    here.
+                </p>
+            </div>
+            <!-- <div class="content has-text-centered">
+                <video id="replay-video" controls muted preload playsinline width="75%">
+                    <source src="./static/videos/replay.mp4" type="video/mp4">
+                </video>
+            </div> -->
+        </div>
+    </div>
 
-            <div class="columns is-centered">
-                <div class="column is-full-width">
 
-                    <h3 class="title is-4">Real-time Changing Appearance in Viewer</h3>
-                    <div class="content has-text-justified">
-                        <p>
-                            You can change the appearance of the scene to any image real-time in the viewer.
-                        </p>
+    <!-- Animation. -->
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+
+                <h2 class="title is-3">Model Components</h2>
+
+                <!-- Interpolating. -->
+                <!-- <h3 class="title is-4">Interpolating states</h3> -->
+                <!-- <div class="content has-text-justified">
+                                <p>
+                                    We can also animate the scene by interpolating the deformation latent codes of two input
+                                    frames. Use the slider here to linearly interpolate between the left frame and the right
+                                    frame.
+                                </p>
+                            </div> -->
+                <div class="is-vcentered interpolation-panel">
+
+                    <div class="image-per-row">
+                        <img src="./static/images/ (1).png" class="interpolation-image"
+                            alt="Interpolate start reference image." />
                     </div>
-                    <div class="content has-text-centered">
-                        <video id="replay-video" controls muted preload playsinline width="75%">
-                            <source src="./static/videos/replay.mp4" type="video/mp4">
-                        </video>
+
+
+                    <!-- <p>Start Frame</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="column interpolation-video-column">
+                                    <!-- <div id="interpolation-image-wrapper">
+                                        Loading...
+                                    </div>
+                                    <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1"
+                                        min="0" max="100" value="0" type="range"> -->
+                    <!-- </div> -->
+                    <div class="image-per-row">
+                        <img src="./static/images/ (2).png" class="interpolation-image"
+                            alt="Interpolation end reference image." />
+                        <!-- <p class="is-bold">End Frame</p> -->
+                    </div>
+                    <div class="image-per-row">
+                        <img src="./static/images/ (3).png" class="interpolation-image"
+                            alt="Interpolation end reference image." />
                     </div>
                 </div>
 
@@ -353,87 +439,13 @@
                 <!--/ Re-rendering. -->
 
             </div>
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-
-                    <h3 class="title is-4">More Accurate Depth Rendering</h3>
-                    <div class="content has-text-justified">
-                        <p>
-                            Add a slider to compare the depth rendering of the scene with and without the background
-                            here.
-                        </p>
-                    </div>
-                    <div class="content has-text-centered">
-                        <video id="replay-video" controls muted preload playsinline width="75%">
-                            <source src="./static/videos/replay.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <br />
-
-            </div>
         </div>
-
-        <!-- Animation. -->
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-
-                    <h2 class="title is-3">Model Components</h2>
-
-                    <!-- Interpolating. -->
-                    <!-- <h3 class="title is-4">Interpolating states</h3> -->
-                    <!-- <div class="content has-text-justified">
-                        <p>
-                            We can also animate the scene by interpolating the deformation latent codes of two input
-                            frames. Use the slider here to linearly interpolate between the left frame and the right
-                            frame.
-                        </p>
-                    </div> -->
-                    <div class="is-vcentered interpolation-panel">
-
-                        <div class="image-per-row">
-                            <img src="./static/images/ (1).png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                        </div>
+    </div>
+    <!--/ Animation. -->
 
 
-                        <!-- <p>Start Frame</p> -->
-                        <!-- </div> -->
-                        <!-- <div class="column interpolation-video-column">
-                            <!-- <div id="interpolation-image-wrapper">
-                                Loading...
-                            </div>
-                            <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1"
-                                min="0" max="100" value="0" type="range"> -->
-                        <!-- </div> -->
-                        <div class="image-per-row">
-                            <img src="./static/images/ (2).png" class="interpolation-image"
-                                alt="Interpolation end reference image." />
-                            <!-- <p class="is-bold">End Frame</p> -->
-                        </div>
-                        <div class="image-per-row">
-                            <img src="./static/images/ (3).png" class="interpolation-image"
-                                alt="Interpolation end reference image." />
-                        </div>
-                    </div>
-
-                    <br />
-                    <!--/ Interpolating. -->
-
-                    <!-- Re-rendering. -->
-
-                    <!--/ Re-rendering. -->
-
-                </div>
-            </div>
-        </div>
-        <!--/ Animation. -->
-
-
-        <!-- Concurrent Work. -->
-        <!-- <div class="columns is-centered">
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Related Links</h2>
 
@@ -467,9 +479,9 @@
                     </div>
                 </div>
             </div> -->
-        <!--/ Concurrent Work. -->
+    <!--/ Concurrent Work. -->
 
-        </div>
+    </div>
     </section>
 
 
