@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" href="./static/images/favicon.svg">
+    <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -91,23 +91,7 @@
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
                                 Congrong Xu</a>,</span>
-                            <!-- <span class="author-block">
-                                <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-                            <span class="author-block">
-                                <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-                            </span> -->
+
                         </div>
 
                         <div class="is-size-5 publication-authors">
@@ -123,7 +107,7 @@
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
                                         </span>
-                                        <span>Paper (Coming Soon)</span>
+                                        <span>Paper (in progress)</span>
                                     </a>
                                 </span>
                                 <!-- <span class="link-block">
@@ -151,7 +135,7 @@
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
-                                        <span>Code (Coming Soon)</span>
+                                        <span>Code (in progress)</span>
                                     </a>
                                 </span>
                                 <!-- Dataset Link. -->
@@ -172,23 +156,23 @@
         </div>
     </section>
 
-    <!-- <section class="hero teaser">
+    <section class="hero teaser">
         <div class="container is-max-desktop">
             <div class="hero-body">
-                <video id="teaser" autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/teaser.mp4" type="video/mp4">
+                <video id="intro" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/intro.mp4" type="video/mp4">
                 </video>
-                <h2 class="subtitle has-text-centered">
+                <!-- <h2 class="subtitle has-text-centered">
                     <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
                     free-viewpoint
                     portraits.
-                </h2>
+                </h2> -->
             </div>
         </div>
-    </section> -->
+    </section>
 
 
-    <section class="hero is-light is-small">
+    <!-- <section class="hero is-light is-small">
         <div class="hero-body">
             <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
@@ -235,7 +219,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <section class="section">
@@ -246,31 +230,9 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            We present the first method capable of photorealistically reconstructing a non-rigidly
-                            deforming scene using photos/videos captured casually from mobile phones.
-                        </p>
-                        <p>
-                            Our approach augments neural radiance fields
-                            (NeRF) by optimizing an
-                            additional continuous volumetric deformation field that warps each observed point into a
-                            canonical 5D NeRF.
-                            We observe that these NeRF-like deformation fields are prone to local minima, and
-                            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-                            more robust optimization.
-                            By adapting principles from geometry processing and physical simulation to NeRF-like
-                            models, we propose an elastic regularization of the deformation field that further
-                            improves robustness.
-                        </p>
-                        <p>
-                            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-                            photos/videos into deformable NeRF
-                            models that allow for photorealistic renderings of the subject from arbitrary
-                            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-                            using a
-                            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-                            images of the same pose at different viewpoints. We show that our method faithfully
-                            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-                            fidelity.
+                            This work presents a novel approach to rendering unconstrained photo collections with
+                            Gaussian Splatting.
+
                         </p>
                     </div>
                 </div>
@@ -281,9 +243,15 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Appearance Interpolation</h2>
+
+                    <p>
+                        The latent representation of a scene is a continuous space, which allows interpolating
+                        between two embeddings smoothly captures variation in appearance without affecting 3D geometry.
+                    </p>
                     <div class="publication-video">
-                        <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <video id="appearance-interpolation" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos/interp.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -294,56 +262,121 @@
 
     <section class="section">
         <div class="container is-max-desktop">
+            <h2 class="title is-3">Neural Background Model</h2>
+            <div class="content has-text-justified">
+                <p>
+                    The background model is a three-layer mlp that predicts the background of the scene without
+                    introducing any 2d model. The background model can be trained effectively along with the gasussian
+                    splatting and cleans up the floters in the scene.
+                </p>
+                <p>
+                    A new alpha loss term is introduced to prevent the gaussians from occupying the background.
+                </p>
+            </div>
 
             <div class="columns is-centered">
+
 
                 <!-- Visual Effects. -->
                 <div class="column">
                     <div class="content">
-                        <h2 class="title is-3">Original Gaussian Splatting</h2>
-                        <video id="egypt-nobg" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33-nobg.mp4" type="video/mp4">
-                        </video>
-                        <video id="library-nobg" autoplay controls muted loop playsinline height="100%">
-                            <source src=".\static\videos\renders\library\2024-05-02-12-45-03-nobg.mp4" type="video/mp4">
-                        </video>
-                        <video id="floating-tree-nobg" autoplay controls muted loop playsinline height="100%">
-                            <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45-nobg.mp4"
-                                type="video/mp4">
-                        </video>
-                        <video id="train-nobg" autoplay controls muted loop playsinline height="100%">
-                            <source src=".\static\videos\renders\train\2024-05-02-12-29-01-nobg.mp4" type="video/mp4">
-                        </video>
+                        <h3 class="title is-4">Original Gaussian Splatting</h2>
+                            <video id="egypt-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33-nobg.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <video id="library-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src=".\static\videos\renders\library\2024-05-02-12-45-03-nobg.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <video id="floating-tree-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45-nobg.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <video id="train-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src=".\static\videos\renders\train\2024-05-02-12-29-01-nobg.mp4"
+                                    type="video/mp4">
+                            </video>
                     </div>
                 </div>
                 <!--/ Visual Effects. -->
 
                 <!-- Matting. -->
                 <div class=" column">
-                    <h2 class="title is-3">With Background Model</h2>
-                    <div class="columns is-centered">
-                        <div class="column content">
-                            <video id="egypt" autoplay controls muted loop playsinline height="100%">
-                                <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33.mp4" type="video/mp4">
-                            </video>
-                            <video id="library" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\library\2024-05-02-12-45-03.mp4" type="video/mp4">
-                            </video>
-                            <video id="floating-tree" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45.mp4"
-                                    type="video/mp4">
-                            </video>
-                            <video id="train" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\train\2024-05-02-12-29-01.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                    <h3 class="title is-4">With Background Model</h2>
+                        <div class="columns is-centered">
+                            <div class="column content">
+                                <video id="egypt" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33.mp4"
+                                        type="video/mp4">
+                                </video>
+                                <video id="library" autoplay controls muted loop playsinline height="100%">
+                                    <source src=".\static\videos\renders\library\2024-05-02-12-45-03.mp4"
+                                        type="video/mp4">
+                                </video>
+                                <video id="floating-tree" autoplay controls muted loop playsinline height="100%">
+                                    <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45.mp4"
+                                        type="video/mp4">
+                                </video>
+                                <video id="train" autoplay controls muted loop playsinline height="100%">
+                                    <source src=".\static\videos\renders\train\2024-05-02-12-29-01.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
 
-                    </div>
+                        </div>
                 </div>
             </div>
             <!--/ Matting. -->
 
-            <!-- Animation. -->
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+
+                    <h3 class="title is-4">Real-time Changing Appearance in Viewer</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            You can change the appearance of the scene to any image real-time in the viewer.
+                        </p>
+                    </div>
+                    <div class="content has-text-centered">
+                        <video id="replay-video" controls muted preload playsinline width="75%">
+                            <source src="./static/videos/replay.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <br />
+                <!--/ Interpolating. -->
+
+                <!-- Re-rendering. -->
+
+                <!--/ Re-rendering. -->
+
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+
+                    <h3 class="title is-4">More Accurate Depth Rendering</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            Add a slider to compare the depth rendering of the scene with and without the background
+                            here.
+                        </p>
+                    </div>
+                    <div class="content has-text-centered">
+                        <video id="replay-video" controls muted preload playsinline width="75%">
+                            <source src="./static/videos/replay.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <br />
+
+            </div>
+        </div>
+
+        <!-- Animation. -->
+        <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column is-full-width">
 
@@ -390,27 +423,17 @@
                     <!--/ Interpolating. -->
 
                     <!-- Re-rendering. -->
-                    <h3 class="title is-4">Re-rendering the input video</h3>
-                    <div class="content has-text-justified">
-                        <p>
-                            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-                            viewpoint such as a stabilized camera by playing back the training deformations.
-                        </p>
-                    </div>
-                    <div class="content has-text-centered">
-                        <video id="replay-video" controls muted preload playsinline width="75%">
-                            <source src="./static/videos/replay.mp4" type="video/mp4">
-                        </video>
-                    </div>
+
                     <!--/ Re-rendering. -->
 
                 </div>
             </div>
-            <!--/ Animation. -->
+        </div>
+        <!--/ Animation. -->
 
 
-            <!-- Concurrent Work. -->
-            <div class="columns is-centered">
+        <!-- Concurrent Work. -->
+        <!-- <div class="columns is-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Related Links</h2>
 
@@ -443,14 +466,14 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <!--/ Concurrent Work. -->
+            </div> -->
+        <!--/ Concurrent Work. -->
 
         </div>
     </section>
 
 
-    <section class="section" id="BibTeX">
+    <!-- <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre><code>@article{park2021nerfies,
@@ -460,19 +483,19 @@
   year      = {2021},
 }</code></pre>
         </div>
-    </section>
+    </section> -->
 
 
     <footer class="footer">
         <div class="container">
-            <div class="content has-text-centered">
+            <!-- <div class="content has-text-centered">
                 <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
                     <i class="fas fa-file-pdf"></i>
                 </a>
                 <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
                     <i class="fab fa-github"></i>
                 </a>
-            </div>
+            </div> -->
             <div class="columns is-centered">
                 <div class="column is-8">
                     <div class="content">
@@ -482,8 +505,8 @@
                                 Commons Attribution-ShareAlike 4.0 International License</a>.
                         </p>
                         <p>
-                            This website template is borrowed from <a
-                                href="https://github.com/nerfies/nerfies.github.io"></a> ,
+                            Thanks <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for open-sourcing
+                            this website template.
 
                         </p>
                     </div>
