@@ -172,54 +172,7 @@
     </section>
 
 
-    <!-- <section class="hero is-light is-small">
-        <div class="hero-body">
-            <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/steve.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-chair-tp">
-                        <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/chair-tp.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-shiba">
-                        <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/shiba.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-fullbody">
-                        <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/fullbody.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-blueshirt">
-                        <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/blueshirt.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-mask">
-                        <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/mask.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-coffee">
-                        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/coffee.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-toby">
-                        <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/toby2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
 
 
     <section class="section">
@@ -256,6 +209,34 @@
                 </div>
             </div>
             <!--/ Paper video. -->
+            <section class="hero is-light is-small">
+                <div class="hero-body">
+                    <div class="container">
+                        <div id="results-carousel" class="carousel results-carousel">
+                            <div class="item item-steve">
+                                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/interp_fountain.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-chair-tp">
+                                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/interp_gate.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-shiba">
+                                <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/interp_fountain2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="item item-fullbody">
+                                <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/interp_gate2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
     <div class="container is-max-desktop">
@@ -272,7 +253,10 @@
                 </div>
                 <div class="content has-text-centered">
                     <video id="replay-video" controls muted preload playsinline width="75%">
-                        <source src="./static/videos/replay.mp4" type="video/mp4">
+                        <source src="./static/videos/fountain.mp4" type="video/mp4">
+                    </video>
+                    <video id="replay-video" controls muted preload playsinline width="75%">
+                        <source src="./static/videos/gate.mp4" type="video/mp4">
                     </video>
                 </div>
 
@@ -319,7 +303,7 @@
                 <!-- Visual Effects. -->
                 <div class="column">
                     <div class="content">
-                        <h3 class="title is-4">Original Gaussian Splatting</h2>
+                        <h3 class="title is-4">Splatfacto</h2>
                             <video id="egypt-nobg" autoplay controls muted loop playsinline height="100%">
                                 <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33-nobg.mp4"
                                     type="video/mp4">
@@ -374,78 +358,115 @@
             <h3 class="title is-4">More Accurate Depth Rendering</h3>
             <div class="content has-text-justified">
                 <p>
-                    Add a slider to compare the depth rendering of the scene with and without the background
-                    here.
+                    The background model also provides a more accurate depth rendering of the scene.
                 </p>
             </div>
-            <!-- <div class="content has-text-centered">
-                <video id="replay-video" controls muted preload playsinline width="75%">
-                    <source src="./static/videos/replay.mp4" type="video/mp4">
-                </video>
-            </div> -->
+            <div class="columns is-centered">
+
+
+                <!-- Visual Effects. -->
+                <div class="column">
+                    <div class="content">
+                        <h3 class="title is-4">Splatfacto</h2>
+                            <video id="flowers-d-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/depth/flowers_nobg.mp4" type="video/mp4">
+                            </video>
+
+                            <video id="train-d-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src=".\static\videos\depth\train_nobg.mp4" type="video/mp4">
+                            </video>
+
+                            <video id="bike-d-nobg" autoplay controls muted loop playsinline height="100%">
+                                <source src=".\static\videos\depth\bike_nobg.mp4" type="video/mp4">
+                            </video>
+                    </div>
+                </div>
+                <!--/ Visual Effects. -->
+
+                <!-- Matting. -->
+                <div class=" column">
+                    <h3 class="title is-4">With Background Model</h2>
+                        <div class="columns is-centered">
+                            <div class="column content">
+                                <video id="flowers-d" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/depth/flowers_bg.mp4" type="video/mp4">
+                                </video>
+
+                                <video id="train-d" autoplay controls muted loop playsinline height="100%">
+                                    <source src=".\static\videos\depth\train_bg.mp4" type="video/mp4">
+                                </video>
+
+                                <video id="bike-d" autoplay controls muted loop playsinline height="100%">
+                                    <source src=".\static\videos\depth\bike_bg.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                        </div>
+                </div>
+
+            </div>
         </div>
-    </div>
 
 
-    <!-- Animation. -->
-    <div class="container is-max-desktop">
-        <div class="columns is-centered">
-            <div class="column is-full-width has-text-centered">
+        <!-- Animation. -->
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-full-width has-text-centered">
 
-                <h2 class="title is-3">Model Components</h2>
+                    <h2 class="title is-3">Model Components</h2>
 
-                <!-- Interpolating. -->
-                <!-- <h3 class="title is-4">Interpolating states</h3> -->
-                <!-- <div class="content has-text-justified">
+                    <!-- Interpolating. -->
+                    <!-- <h3 class="title is-4">Interpolating states</h3> -->
+                    <!-- <div class="content has-text-justified">
                                 <p>
                                     We can also animate the scene by interpolating the deformation latent codes of two input
                                     frames. Use the slider here to linearly interpolate between the left frame and the right
                                     frame.
                                 </p>
                             </div> -->
-                <div class="is-vcentered interpolation-panel">
+                    <div class="is-vcentered interpolation-panel">
 
-                    <div class="image-per-row">
-                        <img src="./static/images/ (1).png" class="interpolation-image"
-                            alt="Interpolate start reference image." />
-                    </div>
+                        <div class="image-per-row">
+                            <img src="./static/images/ (1).png" class="interpolation-image"
+                                alt="Interpolate start reference image." />
+                        </div>
 
 
-                    <!-- <p>Start Frame</p> -->
-                    <!-- </div> -->
-                    <!-- <div class="column interpolation-video-column">
+                        <!-- <p>Start Frame</p> -->
+                        <!-- </div> -->
+                        <!-- <div class="column interpolation-video-column">
                                     <!-- <div id="interpolation-image-wrapper">
                                         Loading...
                                     </div>
                                     <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1"
                                         min="0" max="100" value="0" type="range"> -->
-                    <!-- </div> -->
-                    <div class="image-per-row">
-                        <img src="./static/images/ (2).png" class="interpolation-image"
-                            alt="Interpolation end reference image." />
-                        <!-- <p class="is-bold">End Frame</p> -->
+                        <!-- </div> -->
+                        <div class="image-per-row">
+                            <img src="./static/images/ (2).png" class="interpolation-image"
+                                alt="Interpolation end reference image." />
+                            <!-- <p class="is-bold">End Frame</p> -->
+                        </div>
+                        <div class="image-per-row">
+                            <img src="./static/images/ (3).png" class="interpolation-image"
+                                alt="Interpolation end reference image." />
+                        </div>
                     </div>
-                    <div class="image-per-row">
-                        <img src="./static/images/ (3).png" class="interpolation-image"
-                            alt="Interpolation end reference image." />
-                    </div>
+
+                    <br />
+                    <!--/ Interpolating. -->
+
+                    <!-- Re-rendering. -->
+
+                    <!--/ Re-rendering. -->
+
                 </div>
-
-                <br />
-                <!--/ Interpolating. -->
-
-                <!-- Re-rendering. -->
-
-                <!--/ Re-rendering. -->
-
             </div>
         </div>
-    </div>
-    <!--/ Animation. -->
+        <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+        <!-- Concurrent Work. -->
+        <!-- <div class="columns is-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Related Links</h2>
 
@@ -479,7 +500,7 @@
                     </div>
                 </div>
             </div> -->
-    <!--/ Concurrent Work. -->
+        <!--/ Concurrent Work. -->
 
     </div>
     </section>
