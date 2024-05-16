@@ -253,10 +253,10 @@
                 </div>
                 <div class="content has-text-centered">
                     <video id="replay-video" controls muted preload playsinline width="75%">
-                        <source src="./static/videos/fountain.mp4" type="video/mp4">
+                        <source src="./static/videos/realtime-f.mp4" type="video/mp4">
                     </video>
                     <video id="replay-video" controls muted preload playsinline width="75%">
-                        <source src="./static/videos/gate.mp4" type="video/mp4">
+                        <source src="./static/videos/realtime-g.mp4" type="video/mp4">
                     </video>
                 </div>
 
@@ -300,55 +300,39 @@
             <div class="columns is-centered">
 
 
-                <!-- Visual Effects. -->
+                <!-- Side-by-Side Comparisons Section -->
                 <div class="column">
                     <div class="content">
-                        <h3 class="title is-4">Splatfacto</h2>
-                            <video id="egypt-nobg" autoplay controls muted loop playsinline height="100%">
-                                <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33-nobg.mp4"
-                                    type="video/mp4">
-                            </video>
-                            <video id="library-nobg" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\library\2024-05-02-12-45-03-nobg.mp4"
-                                    type="video/mp4">
-                            </video>
-                            <video id="floating-tree-nobg" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45-nobg.mp4"
-                                    type="video/mp4">
-                            </video>
-                            <video id="train-nobg" autoplay controls muted loop playsinline height="100%">
-                                <source src=".\static\videos\renders\train\2024-05-02-12-29-01-nobg.mp4"
-                                    type="video/mp4">
-                            </video>
-                    </div>
-                </div>
-                <!--/ Visual Effects. -->
-
-                <!-- Matting. -->
-                <div class=" column">
-                    <h3 class="title is-4">With Background Model</h2>
+                        <h3 class="title is-4" style="text-align:center; margin-bottom:20px;">
+                            Side-by-Side Comparisons<br><span style="font-weight:normal; font-size:0.8em;">(Left:
+                                without background
+                                model, Right: with background model)</span>
+                        </h3>
                         <div class="columns is-centered">
                             <div class="column content">
-                                <video id="egypt" autoplay controls muted loop playsinline height="100%">
-                                    <source src="./static/videos/renders/Egypt/2024-05-06-19-20-33.mp4"
+                                <video id="comparison-egypt" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/renders/Egypt/output-egypt-comparison.mp4"
                                         type="video/mp4">
                                 </video>
-                                <video id="library" autoplay controls muted loop playsinline height="100%">
-                                    <source src=".\static\videos\renders\library\2024-05-02-12-45-03.mp4"
+                                <video id="comparison-library" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/renders/library/output-library-comparison.mp4"
                                         type="video/mp4">
                                 </video>
-                                <video id="floating-tree" autoplay controls muted loop playsinline height="100%">
-                                    <source src=".\static\videos\renders\floating-tree\2024-05-02-18-01-45.mp4"
+                                <video id="comparison-floating-tree" autoplay controls muted loop playsinline
+                                    height="100%">
+                                    <source
+                                        src="./static/videos/renders/floating-tree/output-floating-tree-comparison.mp4"
                                         type="video/mp4">
                                 </video>
-                                <video id="train" autoplay controls muted loop playsinline height="100%">
-                                    <source src=".\static\videos\renders\train\2024-05-02-12-29-01.mp4"
+                                <video id="comparison-train" autoplay controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/renders/train/output-train-comparison.mp4"
                                         type="video/mp4">
                                 </video>
                             </div>
-
                         </div>
+                    </div>
                 </div>
+
 
             </div>
         </div>
