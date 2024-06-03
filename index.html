@@ -6,7 +6,7 @@
     <meta name="description" content="Gaussian Splatting for Unconstrained Photo Collections">
     <meta name="keywords" content="Gaussian Splatting, in the wild">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Splatting in the Wild</title>
+    <title>Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for In the Wild Captures.</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -183,9 +183,25 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            This work presents a novel approach to rendering unconstrained photo collections with
-                            Gaussian Splatting.
-
+                            Novel view synthesis from unconstrained in-the-wild images remains a significant yet
+                            challenging task due to photometric
+                            variations and transient occluders that complicate accurate scene reconstruction.
+                            Traditional methods have attempted to
+                            address these issues by integrating global appearance features in Neural Radiance Fields
+                            (NeRF). Although 3D Gaussian
+                            Splatting (3DGS) offers faster training and real-time rendering, it struggles with
+                            in-the-wild scenarios. Recent
+                            advancements, such as SWAG and GS-W, have improved 3DGS but still exhibit limitations. In
+                            this paper, we introduce
+                            Splatfacto-W, a novel approach that leverages the strengths of these methods while
+                            incorporating a neural background
+                            model to enhance multiview consistency and effectively represent backgrounds. Our key
+                            contributions include latent
+                            appearance modeling, efficient transient object handling, and precise background modeling.
+                            Extensive experiments
+                            demonstrate that Splatfacto-W outperforms existing methods in in-the-wild scenarios,
+                            delivering high-quality, real-time
+                            novel view synthesis with improved scene consistency.
                         </p>
                     </div>
                 </div>
@@ -437,32 +453,32 @@
                                     <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1"
                                         min="0" max="100" value="0" type="range"> -->
                         <!-- </div> -->
-                        <div class="image-per-row">
+                        <!-- <div class="image-per-row">
                             <img src="./static/images/ (2).png" class="interpolation-image"
                                 alt="Interpolation end reference image." />
                             <!-- <p class="is-bold">End Frame</p> -->
-                        </div>
-                        <div class="image-per-row">
-                            <img src="./static/images/ (3).png" class="interpolation-image"
-                                alt="Interpolation end reference image." />
-                        </div>
                     </div>
-
-                    <br />
-                    <!--/ Interpolating. -->
-
-                    <!-- Re-rendering. -->
-
-                    <!--/ Re-rendering. -->
-
+                    <div class="image-per-row">
+                        <img src="./static/images/ (3).png" class="interpolation-image"
+                            alt="Interpolation end reference image." />
+                    </div> -->
                 </div>
+
+                <br />
+                <!--/ Interpolating. -->
+
+                <!-- Re-rendering. -->
+
+                <!--/ Re-rendering. -->
+
             </div>
         </div>
-        <!--/ Animation. -->
+    </div>
+    <!--/ Animation. -->
 
 
-        <!-- Concurrent Work. -->
-        <!-- <div class="columns is-centered">
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Related Links</h2>
 
@@ -496,7 +512,7 @@
                     </div>
                 </div>
             </div> -->
-        <!--/ Concurrent Work. -->
+    <!--/ Concurrent Work. -->
 
     </div>
     </section>
