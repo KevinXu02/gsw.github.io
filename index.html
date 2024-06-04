@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Gaussian Splatting for Unconstrained Photo Collections">
-    <meta name="keywords" content="Gaussian Splatting, in the wild">
+    <meta name="keywords" content="Gaussian Splatting, in the wild, Splatfacto-W">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for In the Wild Captures.</title>
+    <title>Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for Unconstrained Photo Collections.</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -87,16 +87,20 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Splatting in the Wild</h1>
+                        <h1 class="title is-1 publication-title">Splatfacto-W: A Nerfstudio Implementation of Gaussian
+                            Splatting for Unconstrained Photo Collections.</h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                Congrong Xu</a>,</span>
-
+                                Congrong Xu</a><sup>1,</sup><sup>2</sup>,</span>
+                            <span class="author-block">, <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                                    class="external-link">
+                                    Angjoo Kanazawa</a><sup>1</sup>,</span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block">ShanghaiTech University,</span>
-                            <span class="author-block">UC Berkeley</span>
+                            <span class="author-block"><sup>1</sup> UC Berkeley</span>
+
+                            <span class="author-block"><sup>2</sup> ShanghaiTech University,</span>
                         </div>
 
                         <div class="column has-text-centered">
@@ -131,13 +135,15 @@
                                 </span> -->
                                 <!-- Code Link. -->
                                 <span class="link-block">
-                                    <a class="external-link button is-normal is-rounded is-dark">
+                                    <a class="external-link button is-normal is-rounded is-dark"
+                                        href="https://github.com/nerfstudio-project/nerfstudio">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
-                                        <span>Code (in progress)</span>
+                                        <span>Code</span>
                                     </a>
                                 </span>
+
                                 <!-- Dataset Link. -->
                                 <!-- <span class="link-block">
                                     <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -162,11 +168,7 @@
                 <video id="intro" autoplay muted loop playsinline height="100%">
                     <source src="./static/videos/intro.mp4" type="video/mp4">
                 </video>
-                <!-- <h2 class="subtitle has-text-centered">
-                    <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-                    free-viewpoint
-                    portraits.
-                </h2> -->
+
             </div>
         </div>
     </section>
@@ -198,10 +200,8 @@
                             model to enhance multiview consistency and effectively represent backgrounds. Our key
                             contributions include latent
                             appearance modeling, efficient transient object handling, and precise background modeling.
-                            Extensive experiments
-                            demonstrate that Splatfacto-W outperforms existing methods in in-the-wild scenarios,
-                            delivering high-quality, real-time
-                            novel view synthesis with improved scene consistency.
+                            Splatfacto-W delivers high-quality, real-time
+                            novel view synthesis with improved scene consistency in in-the-wild scenarios.
                         </p>
                     </div>
                 </div>
@@ -426,59 +426,21 @@
                 <div class="column is-full-width has-text-centered">
 
                     <h2 class="title is-3">Model Components</h2>
+                    <img src="./static/images/pipeline.svg" alt="Pipeline">
+                    <p>More details are provided in the paper.</p>
 
-                    <!-- Interpolating. -->
-                    <!-- <h3 class="title is-4">Interpolating states</h3> -->
-                    <!-- <div class="content has-text-justified">
-                                <p>
-                                    We can also animate the scene by interpolating the deformation latent codes of two input
-                                    frames. Use the slider here to linearly interpolate between the left frame and the right
-                                    frame.
-                                </p>
-                            </div> -->
-                    <div class="is-vcentered interpolation-panel">
-
-                        <div class="image-per-row">
-                            <img src="./static/images/ (1).png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                        </div>
-
-
-                        <!-- <p>Start Frame</p> -->
-                        <!-- </div> -->
-                        <!-- <div class="column interpolation-video-column">
-                                    <!-- <div id="interpolation-image-wrapper">
-                                        Loading...
-                                    </div>
-                                    <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1"
-                                        min="0" max="100" value="0" type="range"> -->
-                        <!-- </div> -->
-                        <!-- <div class="image-per-row">
-                            <img src="./static/images/ (2).png" class="interpolation-image"
-                                alt="Interpolation end reference image." />
-                            <!-- <p class="is-bold">End Frame</p> -->
-                    </div>
-                    <div class="image-per-row">
-                        <img src="./static/images/ (3).png" class="interpolation-image"
-                            alt="Interpolation end reference image." />
-                    </div> -->
                 </div>
 
                 <br />
-                <!--/ Interpolating. -->
-
-                <!-- Re-rendering. -->
-
-                <!--/ Re-rendering. -->
 
             </div>
         </div>
-    </div>
-    <!--/ Animation. -->
+
+        <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+        <!-- Concurrent Work. -->
+        <!-- <div class="columns is-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Related Links</h2>
 
@@ -512,7 +474,7 @@
                     </div>
                 </div>
             </div> -->
-    <!--/ Concurrent Work. -->
+        <!--/ Concurrent Work. -->
 
     </div>
     </section>
