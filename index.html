@@ -138,7 +138,7 @@
                                 <!-- Code Link. -->
                                 <span class="link-block">
                                     <a class="external-link button is-normal is-rounded is-dark"
-                                        href="https://github.com/nerfstudio-project/nerfstudio">
+                                        href="https://github.com/KevinXu02/splatfacto-w">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
@@ -187,23 +187,28 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Novel view synthesis from unconstrained in-the-wild images remains a significant yet
-                            challenging task due to photometric
-                            variations and transient occluders that complicate accurate scene reconstruction.
-                            Traditional methods have attempted to
-                            address these issues by integrating global appearance features in Neural Radiance Fields
-                            (NeRF). Although 3D Gaussian
-                            Splatting (3DGS) offers faster training and real-time rendering, it struggles with
-                            in-the-wild scenarios. Recent
-                            advancements, such as SWAG and GS-W, have improved 3DGS but still exhibit limitations. In
-                            this paper, we introduce
-                            Splatfacto-W, a novel approach that leverages the strengths of these methods while
-                            incorporating a neural background
-                            model to enhance multiview consistency and effectively represent backgrounds. Our key
-                            contributions include latent
-                            appearance modeling, efficient transient object handling, and precise background modeling.
-                            Splatfacto-W delivers high-quality, real-time
-                            novel view synthesis with improved scene consistency in in-the-wild scenarios.
+                            Novel view synthesis from unconstrained in-the-wild image collections remains a significant
+                            yet challenging task due to
+                            photometric variations and transient occluders that complicate accurate scene
+                            reconstruction. Previous methods have
+                            approached these issues by integrating per-image appearance features embeddings in Neural
+                            Radiance Fields (NeRFs).
+                            Although 3D Gaussian Splatting (3DGS) offers faster training and real-time rendering,
+                            adapting it for unconstrained
+                            image collections is non-trivial due to the substantially different architecture.
+                            In this paper, we introduce Splatfacto-W, an approach that integrates per-Gaussian neural
+                            color features and per-image
+                            appearance embeddings into the rasterization process, along with a spherical harmonics-based
+                            background model to
+                            represent varying photometric appearances and better depict backgrounds. Our key
+                            contributions include latent appearance
+                            modeling, efficient transient object handling, and precise background modeling. Splatfacto-W
+                            delivers high-quality,
+                            real-time novel view synthesis with improved scene consistency in in-the-wild scenarios. Our
+                            method improves the Peak
+                            Signal-to-Noise Ratio (PSNR) by an average of 5.3 dB compared to 3DGS, enhances training
+                            speed by 150 times compared to
+                            NeRF-based methods, and achieves a similar rendering speed to 3DGS.
                         </p>
                     </div>
                 </div>
@@ -214,11 +219,13 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Appearance Embedding Interpolation</h2>
-
-                    <p>
-                        The latent representation of a scene is in a continuous space, which allows interpolating
-                        between two embeddings smoothly captures variation in appearance without affecting 3D geometry.
-                    </p>
+                    <div class="content has-text-justified">
+                        <p>
+                            The latent representation of a scene is in a continuous space, which allows interpolating
+                            between two embeddings smoothly captures variation in appearance without affecting 3D
+                            geometry.
+                        </p>
+                    </div>
                     <div class="publication-video">
                         <video id="appearance-interpolation" autoplay controls muted loop playsinline height="100%">
                             <source src="./static/videos/interp.mp4" type="video/mp4">
@@ -272,9 +279,6 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered">
             <div class="column is-full-width">
-
-
-
                 <h3 class="title is-4">Real-time Changing Appearance in Viewer</h3>
                 <div class="content has-text-justified">
                     <p>
@@ -315,12 +319,16 @@
 
     <section class="section">
         <div class="container is-max-desktop has-text-centered">
-            <h2 class="title is-3">Neural Background Model</h2>
+            <h2 class="title is-3">Background Model</h2>
             <div class="content has-text-justified">
                 <p>
                     The background model is a three-layer mlp that predicts the background of the scene without
                     introducing any 2d model. The background model can be trained effectively along with the gaussian
                     splatting and cleans up the floters in the scene.
+                </p>
+                <p>
+                    In our further experiments, we found that directly optimizing on a set of spherical harmonics
+                    coefficients can achieve a similar result while providing a faster training speed.
                 </p>
                 <p>
                     A new alpha loss term is introduced to prevent the gaussians from occupying the background.
@@ -429,8 +437,18 @@
 
                     <h2 class="title is-3">Model Components</h2>
                     <img src="./static/images/pipeline.svg" alt="Pipeline">
-                    <p>More details are provided in the paper.</p>
-
+                    <div class="content has-text-justified">
+                        <p>We begin by predicting the color of each Gaussian using the Appearance Model. These Gaussians
+                            are
+                            then rasterized to
+                            generate the foreground objects. While Background Model predicts the background given ray
+                            directions. The foreground and
+                            background are merged using alpha blending to produce the final image. This final image is
+                            compared with the masked
+                            ground truth image and then processed through the Robust Mask to update the model
+                            parameters.
+                        </p>
+                    </div>
                 </div>
 
                 <br />
